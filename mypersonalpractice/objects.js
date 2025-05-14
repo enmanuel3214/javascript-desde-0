@@ -25,7 +25,11 @@ const nuevoObjeto = {
 }
 
 console.log(nuevoObjeto.nombre, nuevoObjeto.city, nuevoObjeto.id)
+//destructuring objects
+// podemos extraer las propiedades de un objeto de la siguiente forma:
 
+ let {city} = nuevoObjeto
+console.log(city);
 delete nuevoObjeto.id // asi se elimina una propiedad de un objeto con la palabra reservada delete
 
 //como agregar propiedades a un objeto
@@ -41,3 +45,22 @@ console.log(nuevoObjeto)
 for (const key in persona) {
    console.log(persona[key])
 }
+
+const web = {
+    nombre: "Bluuweb",
+    links: {
+        enlace: 'www.bluuweb.cl'
+    },
+    redesSociales:{
+        youtube:{
+            enlace: 'youtube.com/bluuweb',
+            nombres: 'bluuweb yt'
+        }
+    }
+}
+
+console.log(web.redesSociales.youtube.enlace)
+
+const {enlace, nombres} = web.redesSociales.youtube
+
+ console.log(enlace, nombres);
